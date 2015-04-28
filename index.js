@@ -45,7 +45,7 @@ var Dialog = module.exports = {
       str = str.replace(/"/g, "'"); // double quotes to single quotes
       cmd.push('osascript') && cmd.push('-e');
       var script = 'tell app \"System Events\" to display dialog ';
-      script += '\"' + str + '\" with title \"' + title + '\" buttons {\"OK\", \"Cancel\"} }';
+      script += '\"' + str + '\" with title \"' + title + '\" buttons {\"OK\", \"Cancel\"} ';
       script += (type == 'warning') ? " with icon 0" : "";
       cmd.push(script);
 
